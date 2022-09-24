@@ -1,0 +1,9 @@
+.navbar {
+  position: fixed;
+  background-color: aqua;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.3rem;
+  height: var(--navbar-height);
+}
