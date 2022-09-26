@@ -2,3 +2,46 @@
   margin-top: var(--navbar-height);
   padding: 2rem;
 }
+
+.featured {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.featured img {
+  height: 400px;
+  aspect-ratio: 1.5/1;
+}
+
+.featured h1 {
+  font-size: 4rem;
+}
+
+.featured p {
+  color: #777;
+}
+
+.featured button {
+  background-color: transparent;
+  font-weight: bolder;
+  font-size: large;
+  position: absolute;
+  bottom: 0;
+  border: 0;
+  font-family: "Hind Siliguri", sans-serif;
+  transition: 200ms;
+}
+
+.featured button:hover {
+  color: rgb(255, 199, 79);
+}
+
+.productsContainer {
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
