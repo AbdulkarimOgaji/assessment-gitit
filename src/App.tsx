@@ -13,7 +13,7 @@ function App() {
   const closeModal = () => setModalOpen(false);
   return (
     <div className="App">
-      <NavBar />
+      <NavBar openModal={openModal} />
       {modalOpen && <CreateProductModal closeModal={closeModal} />}
 
       <Routes>

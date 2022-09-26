@@ -3,7 +3,6 @@ import { Product } from "../../pages/ProductList";
 import classes from "./product.module.css";
 
 const ProductCard = ({ data }: { data: Product }) => {
-  console.log(data);
   return (
     <div className={classes.card}>
       <h1>{data.name}</h1>

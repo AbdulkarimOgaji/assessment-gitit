@@ -11,6 +11,7 @@ const CreateProductModal = ({ closeModal }: Props) => {
   const [desc, setDesc] = useState("");
 
   const handleCreateProduct = () => {
+    if (name === "" && desc === "") return;
     const prodStr = localStorage.getItem("products") || "[]";
     const currentProducts = JSON.parse(prodStr);
     const id = currentProducts.length || 1;

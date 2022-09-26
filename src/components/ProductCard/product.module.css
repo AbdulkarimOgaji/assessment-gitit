@@ -1,6 +1,13 @@
 .card {
   width: 400px;
   padding: 1rem;
+  border: 1px solid #777;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 14px 0px #1d116026;
 }
 
 .card p {

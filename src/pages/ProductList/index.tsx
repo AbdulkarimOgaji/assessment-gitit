@@ -23,7 +23,7 @@ const ProductList = ({ openModal }: Props) => {
   return (
     <section className={classes.container}>
       <div className={classes.featured}>
-        <img src="/featured.jfif" />
+        <img src="/featured.jfif" alt="featured img" />
         <div>
           <h1>Featured Product</h1>
           <p>
@@ -36,6 +36,9 @@ const ProductList = ({ openModal }: Props) => {
           <button onClick={openModal}>Create a New Product</button>
         </div>
       </div>
+      <h1 style={{ textAlign: "center", margin: "2rem 0" }}>
+        Available Products
+      </h1>
       <section className={classes.productsContainer}>
         {products.map((p) => (
           <ProductCard key={p.id} data={p} />

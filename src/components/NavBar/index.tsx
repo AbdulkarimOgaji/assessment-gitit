@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import classes from "./navbar.module.css";
 import { useEffect, useState } from "react";
 
-const NavBar = () => {
+const NavBar = ({ openModal }: { openModal: () => void }) => {
   const [shadow, setShadow] = useState({});
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const NavBar = () => {
       <ul>
         <li>
           <NavLink to="/" end>
-            Home
+            Getting Started
           </NavLink>
         </li>
         <li>
@@ -43,6 +43,7 @@ const NavBar = () => {
           </a>
         </li>
       </ul>
+      <button onClick={openModal}>New Product</button>
     </header>
   );
 };

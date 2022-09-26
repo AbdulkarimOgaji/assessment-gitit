@@ -49,3 +49,20 @@ a[class="active"]::after {
   border-radius: 3px;
   background-color: black;
 }
+
+.navbar button {
+  grid-column: 6/7;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #777;
+  transition: 250ms;
+  width: fit-content;
+  padding: 0.4rem 2rem;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  border: 1px solid transparent;
+  color: white;
+  background-color: rgb(255, 199, 79);
+}
