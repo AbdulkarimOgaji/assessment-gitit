@@ -1,6 +1,10 @@
 import ProductCard from "../../components/ProductCard";
 import classes from "./product-list.module.css";
-const ProductList = () => {
+
+type Props = {
+  openModal: () => void;
+};
+const ProductList = ({ openModal }: Props) => {
   return (
     <section className={classes.container}>
       <div className={classes.featured}>
@@ -14,7 +18,7 @@ const ProductList = () => {
             voluptatibus reiciendis ipsam soluta voluptas blanditiis quisquam.
             Odio temporibus qui praesentium omnis tempore fugit sed non?
           </p>
-          <button>Create a New Product</button>
+          <button onClick={openModal}>Create a New Product</button>
         </div>
       </div>
       <section className={classes.productsContainer}>
