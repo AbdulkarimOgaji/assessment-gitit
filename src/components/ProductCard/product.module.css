@@ -1,0 +1,22 @@
+.card {
+  width: 400px;
+  padding: 1rem;
+}
+
+.card p {
+  color: #777;
+}
+
+.card a {
+  border: 1px solid #777;
+  padding: 0.3rem 1rem;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 250ms;
+}
+
+.card a:hover {
+  background-color: black;
+  color: white;
+}
