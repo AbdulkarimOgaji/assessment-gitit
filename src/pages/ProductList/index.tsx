@@ -4,7 +4,22 @@ import classes from "./product-list.module.css";
 type Props = {
   openModal: () => void;
 };
+
+export type Product = {
+  id: number;
+  name: string;
+  description: string;
+  dateCreated: Date;
+};
+
+function fetchProducts() {
+  const prodStr = localStorage.getItem("products") || "[]";
+  const products: Product[] = JSON.parse(prodStr);
+  return products;
+}
+
 const ProductList = ({ openModal }: Props) => {
+  const products = fetchProducts();
   return (
     <section className={classes.container}>
       <div className={classes.featured}>
@@ -22,11 +37,9 @@ const ProductList = ({ openModal }: Props) => {
         </div>
       </div>
       <section className={classes.productsContainer}>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {products.map((p) => (
+          <ProductCard key={p.id} data={p} />
+        ))}
       </section>
     </section>
   );

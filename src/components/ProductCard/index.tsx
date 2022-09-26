@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
+import { Product } from "../../pages/ProductList";
 import classes from "./product.module.css";
 
-const ProductCard = () => {
+const ProductCard = ({ data }: { data: Product }) => {
+  console.log(data);
   return (
     <div className={classes.card}>
-      <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
-      <p>Created At something</p>
-      <Link to="/products/2">See more</Link>
+      <h1>{data.name}</h1>
+      <p>{new Date(data.dateCreated).toDateString()}</p>
+      <Link to={`/products/${data.id}`}>See more</Link>
     </div>
   );
 };
