@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import CreateProductModal from "./components/CreateProductModal";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import PageNotFound from "./pages/PageNotFound";
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <CreateProductModal />
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
